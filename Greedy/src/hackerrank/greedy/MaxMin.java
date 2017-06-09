@@ -23,18 +23,10 @@ public class MaxMin {
 
 
         int faireness = Integer.MAX_VALUE;
-        for (int i = 0; i < data.size(); i++) {
+        for (int i = 0; i < n-k+1; i++) {
             int j = i + k - 1;
             int tempval;
-            if (j > data.size() - 1) {
-                j = j -data.size() ;
-                tempval = data.get(i) - data.get(j);
-
-            } else {
-                tempval = data.get(j) - data.get(i);
-
-            }
-            System.out.println("from " + data.get(i) + " " + data.get(j)+" "+tempval);
+            tempval = data.get(j) - data.get(i);
             if (tempval < faireness) {
                 faireness = tempval;
 
